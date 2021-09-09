@@ -50,7 +50,6 @@ export const Board = () => {
       const e = event || window.event;
       // Cancel the event
       e.preventDefault();
-      alert("HAHAHAHA");
       if (e) {
         e.returnValue = ""; // Legacy method for cross browser support
       }
@@ -128,9 +127,9 @@ export const Board = () => {
       <div className={styles.board__cards}>
         {cards.map((card, i) => (
           <Card
+            key={i}
             handleClick={handleClick}
             index={i}
-            key={i}
             name={card.name}
             isActive={isDiscarded(card)}
             isFlipped={isFlipped(i)}

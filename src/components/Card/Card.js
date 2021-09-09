@@ -1,14 +1,7 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-export const Card = ({
-  name,
-  key,
-  isFlipped,
-  isActive,
-  handleClick,
-  index,
-}) => {
+export const Card = ({ name, isFlipped, isActive, handleClick, index }) => {
   return (
     <div className={styles.card}>
       {isFlipped && (
