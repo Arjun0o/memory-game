@@ -45,6 +45,7 @@ export const Board = () => {
     gameOver();
   }, [discardedCards]);
 
+  //to prevent accidental page close and refresh
   useEffect(() => {
     window.onbeforeunload = (event) => {
       const e = event || window.event;
@@ -92,7 +93,7 @@ export const Board = () => {
   //check if all the cards have been discarded
   const gameOver = () => {
     if (discardedCards.length === alphabets.length) {
-      alert(`Game over, your score is ${matches} in ${turns} turns`);
+      alert(`Game over, your score is ${matches} in ${turns} attempts`);
       resetGame();
     }
   };
